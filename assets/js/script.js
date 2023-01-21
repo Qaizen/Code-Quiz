@@ -1,29 +1,33 @@
-// Assign variables to specific elements on HTML using document.getElementByID to use later
+// Assign variables to specific elements on the HTML using document.getElementByID to use later
 var startButton = document.getElementById("start-btn"); //in .start-container start button
 var nextButton = document.getElementById("next-btn"); //in .start-container next button during quiz portion
 var questionBoxElement = document.getElementById("question-container"); //in .question-container during quiz protion
-var containerElement = document.getElementById("quiz-container"); 
-var questionElement = document.getElementById("question");
-var answerBtnElement = document.getElementById("answer-btns");
-var highscoreBtnElement = document.getElementById("highscore-btn");
-var endBoxElement = document.getElementById("done-container");
-var submitBtn = document.getElementById("enter-initials");
-var formEl = document.getElementById("enter-initials-box");
-var scoreBox = document.getElementById("scoreBox");
-var timerEl = document.getElementById('countdown');
-var shuffledQuestions, currentQuestionIndex;
+var containerElement = document.getElementById("quiz-container"); // quiz area
+var questionElement = document.getElementById("question"); //question area
+var answerBtnElement = document.getElementById("answer-btns"); //area for 4 multiple choice answers
+// var highscoreBtnElement = document.getElementById("highscore-btn");
+var endBoxElement = document.getElementById("done-container"); //quiz compvared area
+var submitBtn = document.getElementById("complete-submit"); //submit initials button
+var formEl = document.getElementById("enter-initials-box"); //text box for entering initials
+var scoreBox = document.getElementById("scoreBox"); //area listing high scores from local storage
+var timerEl = document.getElementById('countdown'); //countdown timer w logic for quiz portion
 
+var shuffleQuestions, currentQuestionIndex; //randomly selects questions from list
+
+// countdown timer
 var timeInterval;
 var timeLeft = 60;
-let score = 0;
+var score = 0;
 
-let finalInfo = [];
+// declare global variable for array fucntion to grab the initials entered later
+var finalInfo = [];
 
+// When start button is clicked, initiate countdown timer, hide start button + endbox, shuffle q's, and display question
 function startQuiz() {
     countdown();
     startButton.classList.add('hide');      // hide the start button
     endBoxElement.classList.add('hide');  // hide the endBox
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffleQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;  
     questionBoxElement.classList.remove('hide');    // shows the question box and choices
     nextQuestion();
@@ -45,7 +49,7 @@ function countdown() {
 // what happens when you click the 'next' btn 
 function nextQuestion() {               
     resetAnswer();                        
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+    showQuestion(shuffleQuestions[currentQuestionIndex]);
     // shows the question box and choices
     questionBoxElement.classList.remove('hide');   
     // counting what question # you are on
@@ -99,7 +103,7 @@ function selectAnswer(event) {
     // hide the question box once the answer is selected   
     questionBoxElement.classList.add('hide');       
     nextButton.classList.remove("hide");            
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (shuffleQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         endGame();
@@ -167,30 +171,30 @@ function restart() {
 
 var questions = [
     {
-        question: "Which of the following is not considered a JavaScript pop-up box?",
+        question: "Which of the following is the correct sequence of HTML tags for starting a webpage?",
         answers: [
-            {text: "Alert box", correct: false},
-            {text: "Flex box", correct: true},
-            {text: "Confirm box", correct: false},
-            {text: "Prompt box", correct: false}
+            {text: "Head, Title, HTML, Body", correct: false},
+            {text: "HTML, Body, Title, Head", correct: false},
+            {text: "HTML, Head, Title, Body", correct: false},
+            {text: "HTML, Head, Title, Body", correct: true}
         ]
     },
     {
-        question: "When using flexbox, which of the following will move the box vertically?",
+        question: "What is the HTML attribute used to define the internal CSS stylesheet?",
         answers: [
-            {text: "display: flex", correct: false},
-            {text: "justify content", correct: false},
-            {text: "align-items", correct: true},
-            {text: "flex-direction", correct: false}
+            {text: "styles", correct: false},
+            {text: "class", correct: false},
+            {text: "style", correct: true},
+            {text: "variable", correct: false}
         ]
     },
     {
-        question: "Which of the following is not a JavaScript Operator?",
+        question: "What are  function and var known as in Javascript?",
         answers: [
-            {text: "*", correct: false},
-            {text: "%", correct: false},
-            {text: "+", correct: false},
-            {text: "!", correct: true}
+            {text: "Keywords", correct: false},
+            {text: "Data types", correct: false},
+            {text: "Prototypes", correct: false},
+            {text: "Declaration statements", correct: true}
         ]
     },
     {
@@ -203,12 +207,12 @@ var questions = [
         ]
     },
     {
-        question: "Which of the following is not a Javascript conditional statement?",
+        question: "Which of the follwoing attributes is used to provide a unique name to an element?",
         answers: [
-            {text: "if", correct: false},
-            {text: "or", correct: true},
-            {text: "else", correct: false},
-            {text: "switch", correct: false}
+            {text: "class", correct: false},
+            {text: "id", correct: true},
+            {text: "type", correct: false},
+            {text: "div", correct: false}
         ]
     },      
 ]
