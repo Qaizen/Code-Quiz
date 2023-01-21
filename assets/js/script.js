@@ -33,6 +33,7 @@ function startQuiz() {
     nextQuestion();
 }
 
+//countdown timer for quiz start with setInterval function checks timeLeft variable if more than 1 second it updates HTML. If timeLeft is 0 function stops and uses clearInterval and endGame function
 function countdown() {
     var timeInterval = setInterval(function() {
     if (timeLeft >=1){
@@ -61,7 +62,7 @@ startButton.addEventListener('click', () => {
     startQuiz();
 })
 
-//currentQuestion function = ++ increment to next q
+//currentQuestion function = ++ increment to next question
 nextButton.addEventListener('click', () => {    
     currentQuestionIndex++;
     nextQuestion();
@@ -84,13 +85,14 @@ function showQuestion(question) {
 }
 
 function resetAnswer() {
-    //want to hide the 'next' btn when the next answer appears
+    //want to hide the 'next' btn when the next question appears
     nextButton.classList.add("hide");       
     while (answerBtnElement.firstChild) {
         answerBtnElement.removeChild(answerBtnElement.firstChild);
     }
 }
 
+//when user user click button element the variable selectedButton checks the answer and increments the score based on time.  After that, hid the question container, show next button, and check if more questions are left. If no more questions, display next button. Otherwise end the game.
 function selectAnswer(event) { 
     var selectedButton = event.target;
     var correct = selectedButton.dataset.correct;
@@ -137,6 +139,7 @@ function endGame() {
             score: finalScore
         };
         
+        //store the finalInfo from intials into local storage
         var finalInfo = JSON.parse(localStorage.getItem("finalInfo")) || [];
         finalInfo.push(userScore);
         localStorage.setItem("finalInfo", JSON.stringify(finalInfo));
