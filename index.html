@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <!-- First part of the Code Quiz with title and buttons for start/restart, next, and    -->
     <header>
-        <h1>Code Quiz</h1>
-        <h2 id="countdown"></h2> 
+      <h1>Code Quiz</h1>
+      <!-- Hidden in JS -->
+      <h2 id="countdown"></h2>
     </header>
-    <div class="controls">
-        <button id="start-btn" class="start-btn btn">Start</button>
-        <button id="next-btn" class="next-btn btn hide">Next</button>
-        <!-- what is the highscore-btn? -->
-        <button id="highscore-btn" class="score-btn btn hide">High Scores</button>
+    <div class="start-container">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+      <!-- what is the highscore-btn? -->
+      <!-- <button id="highscore-btn" class="score-btn btn hide">High Scores</button> -->
     </div>
-<!-- Container for the question portion of the quiz with multiple choice answers -->
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-btns" class="btn-grid">
-                <button class="btn"> Answer 1</button>
-                <button class="btn"> Answer 2</button>
-                <button class="btn"> Answer 3</button>
-                <button class="btn"> Answer 4</button>
-            </div>
+    <!-- Container for the question portion of the quiz with multiple choice answers -->
+    <div class="quiz-container">
+      <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-btns" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
         </div>
+      </div>
     </div>
     <!-- End portion of the quiz showing results with option to submit initals for local storage and high score -->
-        <div id="end-container" class="hide">
-            <h3>Quiz Completed!</h3>
-            <div id="scoreBox"></div>
-                <ul class="highList"></ul>
-            <form id="enter-initials-box" class="hide">
-                <div class="initial-box"> 
-                    <input type="text" name="Initials" class="text-input"  placeholder="Enter Initials" /> 
-                </div> 
-                <div class="initial-box">
-                    <button class="btn" id="enter-initials" type="submit">Submit</button>
-                </div>
-            </form>
-        </div>    
+    <div id="done-container" class="hide">
+      <h3>Quiz Completed!</h3>
+      <div id="scoreBox"></div>
+      <ul class="highList"></ul>
+      <form id="enter-initials-box" class="hide">
+        <div class="initial-box">
+          <input
+            type="text"
+            name="Initials"
+            class="text-input"
+            placeholder="Enter Initials"
+          />
+        </div>
+        <div class="initial-box">
+          <button class="btn" id="enter-initials" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
