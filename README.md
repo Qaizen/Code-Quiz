@@ -28,7 +28,7 @@ N/A
 
 ## Usage
 
-Timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. User can save initials and score upon completion.  
+Timed code quiz with multiple-choice questions. This app will run in the browser. Once you press start and select an answer the timer will adjust based on correct answer. Incorrect answers will lose time. When quiz completed there is an option to enter your intials and see a list of high scores stored in local storage. 
 
 ## Credits
 
@@ -36,7 +36,7 @@ NA
 
 ## Link to live website
 
-[link](https://qaizen.github.io/pwgenerator/)
+[link](https://qaizen.github.io/Code-Quiz/)
 
 ## Link to github repository
 

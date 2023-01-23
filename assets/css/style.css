@@ -1,94 +1,106 @@
 * {
-    box-sizing: border-box;
-    margin: 10px;
-    font-family:Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* set main screen background color */
 body {
-    background-color: gray;
-    padding: 0;
-    padding: 0;
+  background-color: gray;
+  padding: 0;
+  padding: 0;
 }
 /*  set the display elements for the class .start-container incdluing the buttons aligned to center */
 .start-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Main header set to center */
 header {
-    text-align: center;
-    margin: 0px;
+  text-align: center;
+  margin: 0px;
 }
 
 /* put a shadow on the header */
 h1 {
-    text-shadow: 2px 2px 5px beige;
+  text-shadow: 2px 2px 5px beige;
 }
 
 /* for the countdown timer font and follow screenwidth */
 #countdown {
-    font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 
 /* Set elements for .quiz-container and .done-container classes (question and score screens) */
-.quiz-container, #done-container{
-    margin: auto;
-    width: 700px;
-    max-width: 80%;
-    /* changed the background color to none to get rid of the .quiz-container box- may need it later w hidden boxes */
-    background-color: none; 
-    border-radius: 5px;
-    padding: 20px 50px;
-    font-size: 2vw;
+.quiz-container,
+.completed-container {
+  margin: auto;
+  width: 700px;
+  max-width: 80%;
+  background-color: none;
+  border-radius: 5px;
+  padding: 20px 50px;
+  font-size: 2vw;
 }
 
 .btn-grid {
-    display: grid;
+  display: grid;
 }
 
 .btn {
-    padding: 10px 30px;
-    display: flex;
-    justify-content: center;
-    width: 60%;
-    background-color: beige;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
-    font-size: 1.5vw;
-    margin: 15px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  background-color: beige;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1.5vw;
+  margin: 15px;
 }
 
 .btn:hover {
-    transform: scale(1.1);
-    background-color: bisque;
+  transform: scale(1.1);
+  background-color: bisque;
 }
 
-.start-btn, .next-btn, .score-btn {
-    width: 100px;
-    margin: 6px; 
-    font-weight: bold;
-    font-size: 1.5vw;
+.start-btn,
+.next-btn,
+.score-btn {
+  width: 100px;
+  margin: 6px;
+  font-weight: bold;
+  font-size: 1.5vw;
 }
 
-/* initals box to center after quic complete */
+/* initials box to center after quiz complete */
 #enter-initials-box {
-    display: flex;
+  display: flex;
+}
+/* initials box to enter */
+.initial-box {
+  height: 50px;
+  margin: 0;
+}
+/* what the user types in the box */
+input {
+  height: 50px;
+  width: 150px;
+  padding-left: 5px;
 }
 
-.initial-box {
-    width: auto;
-    height: 50px;
-    margin: 0;
+/* the default text in the box*/
+input::placeholder {
+  font-size: medium;
 }
 
 #complete-submit.btn {
-    margin-top: 2px;
-    width: 100px;
+  margin-top: 2px;
+  width: 100px;
 }
 
 .hide {
-    display:none;
+  display: none;
 }
