@@ -44,11 +44,9 @@ NA
 
 ## PW generator web app screenshot
 
-![Screenshot](./asset/images/CodeQuiz1.jpg)
-![Screenshot](./asset/images/CodeQuiz2.jpg)
-![Screenshot](./asset/images/CodeQuiz3.jpg)
-![Screenshot](./asset/images/CodeQuiz4.jpg)
+![Screenshot](./assets/images/CodeQuiz1.jpg)
+![Screenshot](./assets/images/CodeQuiz2.jpg)
+![Screenshot](./assets/images/CodeQuiz3.jpg)
+![Screenshot](./assets/images/CodeQuiz4.jpg)
 
-## License
-
-N/A
+assets/images/CodeQuiz1.jpg
