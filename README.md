@@ -49,4 +49,4 @@ NA
 ![Screenshot](./assets/images/CodeQuiz3.jpg)
 ![Screenshot](./assets/images/CodeQuiz4.jpg)
 
-assets/images/CodeQuiz1.jpg
+

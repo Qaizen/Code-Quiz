@@ -1,13 +1,10 @@
 // Assign variables to hold specific elements on the HTML using document.getElementByID method to use later
 var startButton = document.getElementById("start-btn"); //in .start-container start button
 var nextButton = document.getElementById("next-btn"); //in .start-container next button during quiz portion
-var questionBoxElement = document.getElementById("question-container"); //in .question-container during quiz protion
-// var containerElement = document.getElementById //needed?("quiz-container"); // quiz area
+var questionBoxElement = document.getElementById("question-container"); //in .question-container during quiz portion
 var questionElement = document.getElementById("question"); //question area
 var answerBtnElement = document.getElementById("answer-btns"); //area for 4 multiple choice answers
-// var highscoreBtnElement = document.getElementById("highscore-btn");
 var doneBoxElement = document.getElementById("done-container"); //quiz completed area
-// var submitBtn = document.getElementById("complete-submit"); //submit initials button
 var formEl = document.getElementById("enter-initials-box"); //text box area for entering initials
 var scoreBox = document.getElementById("scoreBox"); //area listing high scores from local storage
 var timerEl = document.getElementById("countdown"); //countdown timer w logic for quiz portion
@@ -91,7 +88,7 @@ function resetAnswer() {
   }
 }
 
-//when user user click button element the variable selectedButton checks the answer and increments the score based on time.  After that, hid the question container, show next button, and check if more questions are left. If no more questions, display next button. Otherwise end the game.
+//when user click button element the variable selectedButton checks the answer and increments the score based on time.  After that, hid the question container, show next button, and check if more questions are left. If no more questions, display next button. Otherwise end the game.
 function selectAnswer(event) {
   var selectedButton = event.target;
   var correct = selectedButton.dataset.correct;
