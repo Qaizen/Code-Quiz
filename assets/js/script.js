@@ -208,7 +208,7 @@ var questions = [
   },
   {
     question:
-      "Which of the follwoing attributes is used to provide a unique name to an element?",
+      "Which of the following attributes is used to provide a unique name to an element?",
     answers: [
       { text: "class", correct: false },
       { text: "id", correct: true },
